@@ -1,0 +1,22 @@
+<html>
+<body>
+<table id="myTable" border="1">
+  <tr><td>10</td><td>-5</td><td>0</td><td>0<<td>0<</tr>
+  <tr><td>3</td><td>7</td><td>-2</td><td>0<<td>0<</tr>
+</table>
+
+<script>
+  const table = document.getElementById("myTable");
+  for (let row of table.rows) {
+    for (let cell of row.cells) {
+      const value = parseFloat(cell.textContent);
+      if (value > 0) {        cell.style.backgroundColor = "lightgreen";      }
+	  else if (value < 0) {
+        cell.style.backgroundColor = "lightcoral"; // light red
+      }
+
+    }
+  }
+  </script>
+</body>
+</html>
